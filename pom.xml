@@ -62,7 +62,25 @@
             <artifactId>amqp-client</artifactId>
             <version>3.4.1</version>
         </dependency> -->
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>5.1.5.RELEASE</version>
+</dependency>
+        
+        <dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>1.1.10</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.45</version>
+		</dependency>
 	</dependencies>
+	
 	<!-- <build> <plugins> 布置到tomcat <plugin> <groupId>org.apache.tomcat.maven</groupId> 
 		<artifactId>tomcat7-maven-plugin</artifactId> <version>2.1</version> <configuration> 
 		在这里定义端口号 <port>8080</port> </configuration> </plugin> </plugins> </build> -->

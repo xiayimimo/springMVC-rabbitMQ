@@ -52,4 +52,12 @@
 	
 <!-- spring 定时器 加载 -->
 <task:annotation-driven />
+
+<!-- 拦截器配置 -->
+<mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/*"/>
+            <bean class="com.tycho.interceptor.TimeInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>

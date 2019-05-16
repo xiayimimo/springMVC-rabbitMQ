@@ -1,8 +1,7 @@
 package com.tycho.test;
 
 
-
-public interface TestDynamicDataSourceDao {
+public interface TestDynamicDataSourceDao{
 
 	String getDataSource1Name();
     String getDataSource2Name();

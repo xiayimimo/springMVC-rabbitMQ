@@ -1,7 +1,6 @@
 package com.tycho.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -10,20 +9,24 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.tycho.test.TestDynamicDataSourceDao;
 
 
-@Component
 @Controller
 public class IndexController{
 	
 	@Autowired
     private TestDynamicDataSourceDao dao;
 	
+	@RequestMapping(value = "/loginpage",method= RequestMethod.GET)
+	@ResponseBody
+    public String login(){
+        return "登录成功";
+    }
 	
     @RequestMapping(value = "/index",method= RequestMethod.GET)
     public String index(){
         return "index";
     }
     
-    @RequestMapping("/test")
+    @RequestMapping("/multiDa")
     @ResponseBody
     public String test(){
         String dataSource1Name = dao.getDataSource1Name();

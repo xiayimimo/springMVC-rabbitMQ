@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Timer {
 
-	@Scheduled(cron="0/5 * * * * ?")
+	@Scheduled(cron="0/500 * * * * ?")
 	public void timer() {
 		System.out.println(new Date());
 		System.out.println(DateTimeFormatter.ofPattern("YYYY-MM-dd"));
